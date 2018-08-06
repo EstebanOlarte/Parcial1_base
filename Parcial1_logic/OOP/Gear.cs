@@ -2,5 +2,9 @@
 {
     public class Gear
     {
+        public Gear()
+        {
+            float multiplicador;
+        }
     }
 }
