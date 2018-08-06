@@ -31,8 +31,18 @@ namespace Parcial1_logic
         public Queue<int> ReplaceInQueue(Queue<int> inputQueue, int lookupValue, int replaceValue)
         {
             //NOTA: Para la solución NO SE PERMITE USAR el método ToArray().
+            int c = inputQueue.Count;
+            for (int i=0; i< c; i++)
+            {
+                int temp = inputQueue.Dequeue();
+                if (temp==lookupValue)
+                {
+                    temp = replaceValue;
+                }
+                inputQueue.Enqueue(temp);
+            }
 
-            return null;
+            return inputQueue;
         }
 
         /// <summary>
@@ -43,7 +53,14 @@ namespace Parcial1_logic
         public Stack<string> InverseStack(Stack<string> stack)
         {
             //NOTA: Para la solución NO SE PERMITE USAR el método ToArray().
-            return null;
+            int c = stack.Count;
+            Stack<string> nuevo = new Stack<string>();
+            for (int i = 0; i < c; i++)
+            {
+                nuevo.Push(stack.Pop());
+            }
+
+            return nuevo;
         }
 
         /// <summary>
@@ -56,7 +73,16 @@ namespace Parcial1_logic
         public List<string> MixData(Stack<string> stack, Queue<string> queue)
         {
             //NOTA: Para la solución NO SE PERMITE USAR el método ToArray().
-            return null;
+            List<string> lista = new List<string>();
+            int c = stack.Count;
+            if (c>queue.Count)
+                c = queue.Count;
+            for (int i = 0; i < c; i++)
+            {
+                lista.Add(stack.Pop());
+                lista.Add(queue.Dequeue());
+            }
+            return lista;
         }
 
         /// <summary>
@@ -69,6 +95,11 @@ namespace Parcial1_logic
         /// <returns></returns>
         public int RepeatedTimesInDictionary<Type1, Type2>(Dictionary<Type1, Type2> dict, Type2 lookupValue)
         {
+           // int contador = 0;
+            //foreach ( in dict)
+            //{
+
+            //}
             return -1;
         }
 
