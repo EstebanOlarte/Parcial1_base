@@ -1,0 +1,13 @@
+Feedback:
+
+1. Estructuras de Datos (1.88/2.5)
+ * Todas las pruebas presentadas pasan, excepto RepeatedTimesInDictionary() 
+
+2. OOP (2.0/2.5)
+ * Hero.Equip() solo hace validaciones con el Gear que recibe. Faltó asignar los valores no más.
+ * No se presentan los accesores Hero.CurrentAtk y Hero.CurrentDef, y tampoco se tiene en cuenta el Gear equipado.
+ * ICharacter.Move() no requiere un parámetro. En la implementación entregada, el parámetro es el mismo retorno, lo cual no tiene sentido.
+ * Gear.cs no está definido como clase abstracta, y por tanto no satisface el enunciado de que los únicos Gear que pueden existir son Weapon y Armor.
+ * No hay un limitador global del parámetro para los Gear.
+
+Total: 3.88/5.0
